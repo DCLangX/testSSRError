@@ -1,3 +1,5 @@
+import { testApi3 } from '@/networkApi/user'
+
 const indexStore = {
   namespaced: true,
   state: {
@@ -11,6 +13,7 @@ const indexStore = {
   actions: {
     initialData ({ commit }, { payload }) {
       commit('setData', payload)
+      testApi3()
     }
   }
 }
