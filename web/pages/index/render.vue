@@ -9,10 +9,14 @@
     <template v-else>
       <img src="https://gw.alicdn.com/tfs/TB1v.zIE7T2gK0jSZPcXXcKkpXa-128-128.gif" class="loading">
     </template>
+    <Button>123</Button>
+
   </div>
 </template>
 
 <script lang="ts">
+import { Button } from 'vant'
+
 import { defineComponent } from 'vue'
 import { mapState } from 'vuex'
 import Slider from '@/components/slider/index.vue'
@@ -24,7 +28,8 @@ export default defineComponent({
   components: {
     Slider,
     Rectangle,
-    Search
+    Search,
+    Button
   },
   computed: {
     ...mapState({

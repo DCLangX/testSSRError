@@ -1,5 +1,6 @@
 // http.ts
 import axios, { AxiosRequestConfig, AxiosResponse } from 'axios'
+import { Notify } from 'vant'
 
 const service = axios.create({
   baseURL: '/api',
@@ -34,6 +35,7 @@ service.interceptors.response.use(
   },
   async (error) => {
     console.error('响应拦截器发生错误')
+    Notify({ type: 'danger', message: '错误' })
     console.dir(error)
     return await Promise.reject(error)
   }
